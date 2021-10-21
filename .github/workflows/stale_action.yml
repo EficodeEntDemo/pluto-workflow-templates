@@ -2,8 +2,8 @@ name: 'Label stale issues and pull requests'
 on:
   workflow_dispatch:
   schedule:
-    # Runs every Monday 16:31 UTC
-    - cron: '*/5 * * * *'
+    # Runs every day 1:30 UTC
+    - cron: '30 1 * * *'
 
 
 
