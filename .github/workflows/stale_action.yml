@@ -1,9 +1,7 @@
 name: 'Label stale issues and pull requests'
 on:
-  workflow_dispatch:
-  schedule:
-    # Runs every Monday 16:31 UTC
-    - cron: '*/5 * * * *'
+  push:
+    branches: [feature/1-stale-action-workflow]
 
 
 
@@ -13,10 +11,9 @@ jobs:
     steps:
       - uses: actions/stale@v4
         with:
-          stale-issue-message: "This issue is stale because it has been open $INPUT_DAYS_BEFORE_STALE days with no activity."
-          stale-pr-message: "This PR is stale because it has been open x days with no activity."
-          close-issue-message: 'This issue was closed because it has been stalled for x days with no activity.'
-          days-before-stale: 1
+          stale-issue-message: "This issue has been labeled stale because it has been open $INPUT_DAYS_BEFORE_STALE days with no activity."
+          stale-pr-message: "This pull request has been labeled stale because it has been open $INPUT_DAYS_BEFORE_STALE days with no activity."
+          days-before-stale: 0
           days-before-close: -1
           days-before-pr-close: -1
-          debug-only: false
+          debug-only: true
