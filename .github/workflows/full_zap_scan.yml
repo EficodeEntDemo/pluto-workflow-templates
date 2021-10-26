@@ -1,4 +1,4 @@
-name: 'Make a full ZAP scan'
+name: 'Run full ZAP scan'
 on:
   workflow_dispatch:
 
@@ -8,5 +8,6 @@ jobs:
     steps:
       - name: ZAP Scan
         uses: zaproxy/action-full-scan@v0.3.0
+        # Set the webpage you want to scan here. Before scanning, read the warning here: https://github.com/zaproxy/action-full-scan
         with:
           target: 'your_webpage'
