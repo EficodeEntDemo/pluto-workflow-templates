@@ -1,0 +1,5 @@
+{
+  "name": "Spring Boot Rest API",
+  "category": "Api Development/java/Spring Boot",
+  "build-system": "Gradlew"
+}
