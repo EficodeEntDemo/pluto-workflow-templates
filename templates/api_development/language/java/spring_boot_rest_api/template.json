@@ -1,5 +1,6 @@
 {
   "name": "Spring Boot Rest API",
+  "description": "Spring Boot 2.5.x template for building a REST-full API",
   "category": "Api Development/java/Spring Boot",
   "build-system": "Gradlew"
 }
